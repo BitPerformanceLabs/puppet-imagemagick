@@ -3,7 +3,7 @@ require 'formula'
 class LittleCms2 < Formula
   homepage 'http://www.littlecms.com/'
   url 'http://sourceforge.net/projects/lcms/files/lcms/2.4/lcms2-2.4.tar.gz'
-  sha1 '9944902864283af49e4e21a1ca456db4e04ea7c2'
+  sha256 'bd9df047d51943acc4bc6cf55d88edb5b6785a53337ee2a0f74dd521aedde87d'
 
   version '2.4-boxen1'
 
