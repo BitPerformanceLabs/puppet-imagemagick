@@ -15,16 +15,16 @@ class Imagemagick < Formula
 
   version '6.8.0-10-boxen2'
 
-  depends_on :libltdl
+  depends_on 'libltdl' => :run
 
   depends_on 'pkg-config' => :build
 
   depends_on 'jpeg' => :recommended
-  depends_on :libpng => :recommended
-  depends_on :freetype => :recommended
+  depends_on 'libpng' => :recommended
+  depends_on 'freetype' => :recommended
 
-  depends_on :x11 => :optional
-  depends_on :fontconfig => :optional
+  depends_on 'x11' => :optional
+  depends_on 'fontconfig' => :optional
   depends_on 'libtiff' => :optional
   depends_on 'little-cms' => :optional
   depends_on 'jasper' => :optional
@@ -35,7 +35,7 @@ class Imagemagick < Formula
   depends_on 'ghostscript' => :optional
 
   opoo '--with-ghostscript is not recommended' if build.with? 'ghostscript'
-  if build.with? 'openmp' and (MacOS.version == 10.5 or ENV.compiler == :clang)
+  if (build.with? 'openmp') && (MacOS.version == 10.5 || ENV.compiler == :clang)
     opoo '--with-openmp is not supported on Leopard or with Clang'
   end
 
