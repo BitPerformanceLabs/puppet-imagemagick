@@ -15,7 +15,7 @@ class Imagemagick < Formula
 
   version '6.8.0-10-boxen2'
 
-  depends_on 'libltdl' => :run
+  depends_on 'libtool' => :run
 
   depends_on 'pkg-config' => :build
 
